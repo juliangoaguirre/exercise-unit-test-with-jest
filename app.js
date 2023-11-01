@@ -22,10 +22,11 @@ return valueInDollar
 }
 
 function fromYenToPound(Yen){
-let valueInPound = Yen * oneEuroIs.GBP
+let valueInEuro = Yen / oneEuroIs.JPY 
+let valueInPound = valueInEuro * oneEuroIs.GBP
 return valueInPound
 }
 
 
 console.log(fromYenToPound(1))
-module.exports = { sum };
+module.exports = { sum, fromDollarToYen, fromEuroToDollar, fromYenToPound };
